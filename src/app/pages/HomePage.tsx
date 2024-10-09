@@ -28,9 +28,9 @@ const HomePage: React.FC = () => {
       const randomEmoji = await fetch('https://emojihub-1001447344924.asia-southeast2.run.app/api/random');
       const randomEmojiData: Emoji = await randomEmoji.json();
       setCurrentLoadingEmoji(randomEmojiData.htmlCode[0]);
-      await new Promise(resolve => setTimeout(resolve, 200)); // 200ms interval
+      await new Promise(resolve => setTimeout(resolve, 200)); 
     }
-    fetchEmoji(); // Fetch new emoji after loading
+    fetchEmoji(); 
   };
 
   useEffect(() => {
